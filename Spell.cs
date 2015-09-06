@@ -586,6 +586,14 @@ namespace LeagueSharp.Common
         {
             return (float) ObjectManager.Player.GetSpellDamage(target, Slot, stage);
         }
+        
+        /// <summary>
+        ///     Gets Spell's ManaCost.
+        /// </summary>
+        public float ManaCost
+        {
+            get { return ObjectManager.Player.Spellbook.GetSpell(Slot).ManaCost; }
+        }
 
         /// <summary>
         ///     Gets the damage that the skillshot will deal to the target using the damage lib and returns if the target is
